@@ -1,5 +1,4 @@
-<<<<<<< HEAD
+
 hey ther its me ..
-=======
 hey ther its me 
->>>>>>> 3cac3c7bd7f1f51f5713a2fb4f438bb77276f50b
+
