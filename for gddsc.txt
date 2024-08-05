@@ -89,3 +89,59 @@ and the next middleware function in the application's request-response cycle.
 Parsing JSON:
 
 When the express.json() middleware is used, it parses incoming requests with JSON payloads and makes the resulting data available on req.body.
+
+
+8.>
+app.use in Express.js is a method used to mount middleware functions at specific paths. While it can be used to serve static files.
+
+9.> 
+Accessing Event Properties:
+
+The event object contains properties that describe the event. For example, in a click event, it provides details about the mouse click, such as the position of the click.
+javascript
+==>
+function handleClick(event) {
+  console.log(event.type); // 'click'
+  console.log(event.target); // The element that was clicked
+}
+==>
+Preventing Default Behavior:
+
+You can prevent the default action of an event using event.preventDefault(). This is commonly used in form submissions to prevent the page from refreshing.
+javascript
+==>
+function handleSubmit(event) {
+  event.preventDefault(); // Prevents the form from submitting
+  console.log('Form submitted!');
+}
+==>
+Stopping Event Propagation:
+
+To stop the event from propagating (bubbling up or down the DOM), use event.stopPropagation(). This can be useful to prevent event handlers on parent elements from being triggered.
+javascript
+==>
+function handleClick(event) {
+  event.stopPropagation(); // Prevents the event from bubbling up
+  console.log('Clicked!');
+}
+==>
+Accessing Event Details:
+
+The event object provides additional details depending on the event type. For example, for keyboard events, you can access the key that was pressed.
+javascript
+==>
+function handleKeyPress(event) {
+  console.log(event.key); // The key that was pressed
+}
+==>
+Modifying Event Behavior:
+
+You can use event properties to modify how the event behaves. For example, you can use event.altKey to check if the Alt key was pressed during a mouse event.
+javascript
+==>
+function handleMouseDown(event) {
+  if (event.altKey) {
+    console.log('Alt key was pressed during the mouse down event.');
+  }
+}
+..
