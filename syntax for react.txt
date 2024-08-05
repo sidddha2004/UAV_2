@@ -1,0 +1,2 @@
+1.>You can use npm list to see the installed dependencies.
+==<npm list --depth0>==
