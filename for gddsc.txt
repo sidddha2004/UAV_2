@@ -89,3 +89,11 @@ and the next middleware function in the application's request-response cycle.
 Parsing JSON:
 
 When the express.json() middleware is used, it parses incoming requests with JSON payloads and makes the resulting data available on req.body.
+
+
+8.> JWT way to securely transmit information between parties as a JSON object. It is commonly used for authentication and authorization in web applications.
+Authentication:
+
+When a user logs in, the server creates a JWT, which contains the user's information (like their ID). This token is then sent back to the user's browser.
+The user's browser stores this token (usually in local storage or a cookie) and sends it with every request to the server.
+The server checks the token to verify the user's identity and grant access to protected resources without needing to re-authenticate the user every timE.
