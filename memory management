@@ -24,3 +24,12 @@ the remaining space (5 integers' worth, 20 bytes in this case) goes unused. Whil
 Is the Memory Wasted?
 Yes, the extra memory you've allocated but don't use is technically wasted because it remains reserved but unused. 
 The program will still run fine, but this wasted memory could be problematic in scenarios where memory is limited or in long-running programs where memory needs to be managed efficiently.
+
+//To increse memory 
+How This Works:
+Initially, malloc() allocates enough memory for 5 integers (let’s say 20 bytes).
+The array is initialized with values from 1 to 5 and printed.
+realloc() is called to expand the memory block to hold 10 integers (40 bytes).
+If the expansion can be done in place, realloc() will extend the existing memory block.
+If not, it will allocate a new block of memory, copy the data from the old block to the new one, and free the old block.
+The new elements (6 to 10) are initialized and the expanded array is printed.
